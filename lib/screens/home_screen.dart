@@ -28,7 +28,6 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
       _updateInput(buttonText);
     }
     
-
     setState(() {
       _output = _input.isEmpty ? _num1.toString() : _input;
       if (_output == "0.0") {
@@ -36,12 +35,13 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
       }
     });
   }
-  void _resetCalculator() {
+    void _resetCalculator() {
     _output = "0";
     _input = "";
     _operation = "";
     _num1 = 0;
   }
+
   void _setOperation(String operation) {
     if (_input.isNotEmpty) {
       _num1 = double.tryParse(_input) ?? 0;
